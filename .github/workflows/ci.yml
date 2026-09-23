@@ -1,20 +1,11 @@
-name: CI Pipeline
+name: basic cicd
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Print Hello
-        run: echo "Hello from GitHub Actions!"
-
-      - name: Display Files
-        run: ls -la
+jobs: 
+   test:
+     runs-on: ubuntu-latest
+     steps:
+        - uses: actions/checkout@v4
+        - run: echo "succesfully implement on cicd "
+     
